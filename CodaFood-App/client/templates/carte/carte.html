@@ -1,0 +1,11 @@
+<template name="carte">
+<h1>Carte de nos pizzas</h1>
+    <div class="categories row">
+    {{#each categories}}
+        <div class="categorie col-20">
+        <h2>{{name}}</h2>
+        <img src="/images/{{image}}" alt="">
+        </div>
+        {{/each}}
+    </div>
+</template>

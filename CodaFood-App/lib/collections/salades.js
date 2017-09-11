@@ -1,0 +1,1 @@
+Salades = new Mongo.Collection('salades');
