@@ -1,9 +1,11 @@
 <template name="layout">
+    <body>
     <div class="container-fluid">
         {{>header}}
 
-        <div id="main">
-            {{> yield}}
+        <div class="page-content">
+                {{> yield}}
         </div>
     </div>
+    </body>
 </template>

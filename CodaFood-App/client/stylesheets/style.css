@@ -37,7 +37,6 @@ body {
     height: 300px; }
 h1{
     text-align: center;
-    margin: 60px 0;
 }
 .categories{
     /*width: 100%;*/
@@ -53,13 +52,18 @@ h1{
     /*background-color: darkgrey;*/
     /*height: 250px;*/
 }
-.categorie img{
-    width:5%;
-    height:auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.demo-card-header-pic .card-header {
+    height: 40vw;
+    background-size: cover;
+    background-position: center;
 }
+/*img{*/
+    /*width:5%;*/
+    /*height:auto;*/
+    /*!*display: block;*!*/
+    /*!*margin-left: auto;*!*/
+    /*!*margin-right: auto;*!*/
+/*}*/
 
 .categorie h2{
     text-align: center;
