@@ -1,11 +1,25 @@
-<template name="layout">
-    <body>
-    <div class="container-fluid">
-        {{>header}}
+<body class="framework7-root layout-dark theme-red">
+<!-- There isn't anything here really -->
+</body>
 
-        <div class="page-content">
-                {{> yield}}
+<template name="layout">
+    <div class="statusbar-overlay"></div>
+    <div class="panel-overlay" style=""></div>
+    {{>panelleft}}
+    <div class="views">
+        <div class="view view-main">
+            <div class="pages navbar-fixed">
+                <div class="page">
+                    {{>header}}
+
+                    <div class="page-content">
+                        {{#momentum plugin='iron-router' options=transition}}
+                            {{> yield}}
+                        {{/momentum}}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    </body>
+
 </template>

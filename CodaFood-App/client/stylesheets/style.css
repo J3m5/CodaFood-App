@@ -47,10 +47,23 @@ h1{
     /*margin-left: auto;*/
     /*margin-right: auto;*/
 }
+.list-block {
+    margin: 0 0 !important;
+}
+.item-inner:after{
+    /*height: 2px !important;*/
+}
+.item-media img{
+    width: 24.5vw;
+    height: auto;
+}
 .categorie {
     /*width: 20%;*/
     /*background-color: darkgrey;*/
     /*height: 250px;*/
+}
+.content{
+    background-color: inherit;
 }
 .demo-card-header-pic .card-header {
     height: 40vw;

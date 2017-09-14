@@ -1,55 +1,23 @@
 <template name="carte">
-    <!--<h1>Carte de nos pizzas</h1>-->
-    <div class="content-block-title">Carte</div>
-    <div class="list-block media-list">
-        <ul>
-    {{#each categories}}
-            <li>
-                <a href="{{pathFor route='pizzas'}}" class="item-link item-content">
-                    <div class="item-media"><img src="/images/{{image}}" alt="" width="80"></div>
-                    <div class="item-inner">
-                        <div class="item-title-row">
-                            <div class="item-title">{{name}}</div>
-                            <!--<div class="item-after">$15</div>-->
-                        </div>
-                        <!--<div class="item-subtitle">Beatles</div>-->
-                        <!--<div class="item-text">Lorem ipsum dolor sit amet...</div>-->
-                    </div>
-                </a>
-            </li>
-    {{/each}}
-        </ul>
-    </div>
+    <!--<div class="content segue-left-to-right">-->
+        <div class="content-block-title"><h1>Carte de nos pizzas</h1></div>
+        <div class="list-block media-list color-white">
+            <ul>
+                {{#each categories}}
+                    <li>
+                        <a href="{{pathFor route='pizzas'}}" class="item-link item-content">
+                            <div class="item-media"><img src="/images/{{image}}" alt=""></div>
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title"><h2>{{name}}</h2></div>
+                                </div>
+                                <!--<div class="item-subtitle">Beatles</div>-->
+                                <!--<div class="item-text">Lorem ipsum dolor sit amet...</div>-->
+                            </div>
+                        </a>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
 
-
-
-
-
-
-    <!--<div class="page-content">-->
-        <!--<div class="content-block-title">Full Layout</div>-->
-        <!--<div class="list-block">-->
-            <!--<ul>-->
-                <!---->
-                    <!--<li class="item-content">-->
-                        <!--<div class="item-media"><i class="icon icon-f7"></i></div>-->
-                        <!--<div class="item-inner">-->
-                            <!--<div class="item-title"></div>-->
-                            <!--<div class="item-after">Label</div>-->
-                        <!--</div>-->
-                    <!--</li>-->
-                <!---->
-            <!--</ul>-->
-            <!--<div class="list-block-label">List block label text goes here</div>-->
-        <!--</div>-->
-
-    <!--</div>-->
-    <!--<div class="categories row">-->
-
-        <!--<div class="categorie col-20">-->
-            <!--<h2></h2>-->
-            <!---->
-        <!--</div>-->
-
-    <!--</div>-->
 </template>

@@ -7,23 +7,28 @@ if (Categories.find().count() === 0) {
     let CategoriesList =[
         {
             name: "Pizzas",
-            image: "order2.png"
+            image: "order2.png",
+            url: "pizzas"
         },
         {
             name: "Burgers",
-            image: "b1.png"
+            image: "b1.png",
+            url: "burgers"
         },
         {
             name: "Salades",
-            image: "sa1.png"
+            image: "sa1.png",
+            url: "salades"
         },
         {
             name: "Boissons",
-            image: "bo1.png"
+            image: "bo1.png",
+            url: "boissons"
         },
         {
             name: "Desserts",
-            image: "d1.png"
+            image: "d1.png",
+            url:"desserts"
         }
     ];
 
@@ -39,7 +44,7 @@ if (Categories.find().count() === 0) {
 
     let PizzasList= [{
         image: "order1.png",
-        name: "Paysanne ",
+        name: "Paysanne",
         description: "Sauce tomate, emmenthal, lardons fumés, champignons frais émincés, oeuf, mozzarella fraiche, olives noires confites. ",
         price: 12
     },

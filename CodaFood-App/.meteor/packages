@@ -22,3 +22,7 @@ accounts-password
 iron:router
 underscore
 tecsinapse:framework7
+session
+frozeman:persistent-minimongo2
+zendy:segue
+check

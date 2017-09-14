@@ -10,10 +10,10 @@ Router.route('/', {
         return Meteor.subscribe('categories');
     }});
 
-Router.route('/:name', {
+Router.route('/:url', {
     name: "pizzas",
-    waitOn: function() {
-        return Meteor.subscribe('pizzas');
+    subscriptions: function() {
+        this.subscribe('pizzas');
     },
-    data: function() { return Categories.findOne(this.params.name); }
+    data: function() { return Categories.findOne({url: this.params.url}); }
 });
