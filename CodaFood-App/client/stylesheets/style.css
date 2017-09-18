@@ -38,9 +38,13 @@ body {
 
 #spinner {
     height: 300px; }
-h1{
-    text-align: center;
-}
+/*h2{*/
+    /*text-align: center;*/
+    /*margin: 0;*/
+/*}*/
+/*.carte-title{*/
+    /*padding:0 !important;*/
+/*}*/
 .categories{
     /*width: 100%;*/
     /*height: auto;*/
@@ -50,15 +54,50 @@ h1{
     /*margin-left: auto;*/
     /*margin-right: auto;*/
 }
-.list-block {
+.cat-list {
     margin: 0 0 !important;
 }
 .item-inner:after{
     /*height: 2px !important;*/
 }
 .item-media img{
-    width: 24.5vw;
+    width: 10vh;
     height: auto;
+}
+.item-media{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.carte-title h2 {
+text-align: center;
+    margin:0;
+    color: white;
+    font-size: 2em;
+}
+.item-title h2 {
+    text-align: center;
+}
+.carte-title{
+    padding: 0 !important;
+    line-height: 2em !important;
+}
+.pizza-title{
+    color: white !important;
+    font-size: 2em !important;
+    line-height: 1.8em;
+    padding: 0 !important;
+    margin-bottom: 6px !important;
+}
+.nb-added{
+    width: 15vw;
+    /*margin-left: 42% !important;*/
+    /*margin-right: auto !important;*/
+}
+.list-block input[type=number]{
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
 }
 .categorie {
     /*width: 20%;*/

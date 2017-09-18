@@ -6,8 +6,8 @@ Router.configure({
 
 Router.route('/', {
     name: "carte",
-    waitOn: function() {
-        return Meteor.subscribe('categories');
+    subscriptions: function() {
+        this.subscribe('categories');
     }});
 
 Router.route('/:url', {

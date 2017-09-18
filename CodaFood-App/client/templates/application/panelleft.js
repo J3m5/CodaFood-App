@@ -1,5 +1,7 @@
 Template.panelleft.helpers({
-    //add you helpers here
+    cartitems: function(){
+        return Cart.find({});
+    }
 });
 
 Template.panelleft.events({
