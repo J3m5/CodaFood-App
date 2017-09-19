@@ -1,10 +1,10 @@
-
-Template.pizzas.helpers({
-    pizzas: function() {
-        return Pizzas.find({});
-    },
-
-});
+//
+// Template.pizzas.helpers({
+//     pizzas: function() {
+//         return Pizzas.find({});
+//     },
+//
+// });
 Template.pizza.helpers({
     qty : function(){
         if(Cart.findOne({product: this.name}) ){
@@ -21,20 +21,19 @@ Template.pizza.helpers({
 });
 Template.pizzas.events({
 
-    'click .modifytocart'(event) {
+
+    'click .modifycart'(event) {
         // event.preventDefault();
         let product = this.name;
-        let inc;
+        let inc = 1;
         let op = event.target.firstChild.textContent;
-        function findOneProd(product) {
-            return !!Cart.findOne({product: product})
-        }
+        let findOneProd = Cart.findOne({product: product});
         if(op ==="+"){
-            inc =1;
+            inc= 1;
         } else if(op ==="-"){
             inc= -1;
         }
-        if(findOneProd(product) ){
+        if(findOneProd ){
             if(Cart.findOne({product: product}).quantity === 1 && inc === -1){
                 Cart.remove({product: product})
             }else{

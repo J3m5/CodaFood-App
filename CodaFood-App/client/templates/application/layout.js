@@ -7,17 +7,23 @@ Template.layout.events({
 });
 
 Template.layout.onCreated(function () {
-    //add your statement here
-    let myApp = new Framework7({
-        router: false // prevent framework 7 to override flow router link
-    });
 
-    // If we need to use custom DOM library, let's save it to $$ letiable:
-    let $$ = Dom7;
 });
 
 Template.layout.onRendered(function () {
     //add your statement here
+    //add your statement here
+    let myApp = new Framework7({
+        router: false, // prevent framework 7 to override flow router link
+        swipePanel: 'both',
+        material: true,
+        materialRipple: true,
+        materialRippleElements: '.ripple, a.link, a.item-link, .button, .modal-button, .tab-link, .label-radio, .label-checkbox, .actions-modal-button, a.searchbar-clear, .floating-button',
+        sortable: false
+    });
+
+    // If we need to use custom DOM library, let's save it to $$ letiable:
+    let $$ = Dom7;
 });
 
 Template.layout.onDestroyed(function () {

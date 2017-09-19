@@ -5,13 +5,13 @@
 <template name="layout">
     <div class="statusbar-overlay"></div>
     <div class="panel-overlay" style=""></div>
-    {{>panelleft}}
+    {{>panelLeft}}
+    {{>panelRight}}
     <div class="views">
         <div class="view view-main">
-            <div class="pages navbar-fixed">
-                <div class="page">
+            <div class="pages">
+                <div class="page navbar-fixed">
                     {{>header}}
-
                     <div class="page-content">
                         {{#momentum plugin='iron-router' options=transition}}
                             {{> yield}}

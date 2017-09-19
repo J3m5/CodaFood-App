@@ -1,7 +1,7 @@
 <template name="pizzas">
     <div class="content segue-right-to-left">
-        {{#each pizzas}}
-            {{>pizza}}
+        {{#each pizz in pizzas}}
+            {{>pizza pizz}}
         {{/each}}
     </div>
 </template>
@@ -20,8 +20,8 @@
             </div>
         </div>
         <div class="card-footer">
-            {{#if bought }} <p class="addtocart">
-                <a  class="button button-fill button-raised">-</a>
+            {{#if bought }} <p class="modifycart buttons-row">
+                <a  class="button button-fill button-raised ">-</a>
             </p>
             {{/if}}
             <div class="list-block nb-added">
@@ -38,7 +38,7 @@
                 </ul>
             </div>
 
-            <p class="modifycart">
+            <p class="modifycart buttons-row">
                 <a  class="button button-fill button-raised">{{#unless bought }}Add to cart {{else}}+{{/unless}}</a>
             </p>
 

@@ -1,0 +1,26 @@
+<template name="panelRight">
+    <div class="panel panel-right panel-cover">
+        <div class="view navbar-fixed" data-page="panel-right">
+            <div class="pages">
+                <div data-page="panel-right" class="page">
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="center">Paramètres</div>
+                        </div>
+                    </div>
+                    <div class="page-content">
+                        <div class="content-block">
+                            {{#each cartitems}}
+                                {{> cart_list}}
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="cart_list">
+    <p>{{product}} : {{quantity}}</p>
+</template>

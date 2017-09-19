@@ -10,10 +10,13 @@ Router.route('/', {
         this.subscribe('categories');
     }});
 
-Router.route('/:url', {
-    name: "pizzas",
-    subscriptions: function() {
-        this.subscribe('pizzas');
-    },
-    data: function() { return Categories.findOne({url: this.params.url}); }
+Router.route('/cat/:name', function() {
+    let test = this.params.name;
+    let low = test.toLowerCase();
+    Meteor.subscribe(low);
+    this.render('pizzas',{
+         data: function() {
+             return { pizzas : window[test].find({}) }
+        }
+    })
 });
