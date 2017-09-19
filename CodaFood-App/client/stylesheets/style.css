@@ -7,6 +7,7 @@
     -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); }
 
+
 .btn-default:hover {
     margin-top:8px !important;
     /*border-bottom-width: 3px !important;*/
@@ -33,8 +34,12 @@ body {
 .navbar {
     margin-bottom: 10px; }
 /* line 32, ../sass/style.scss */
-.navbar .navbar-inner {
-    border-radius: 0 0 3px 3px; }
+.navbar .title{
+    margin: inherit;
+    margin-left: auto !important;
+    font-size: 30px !important;
+    font-weight: bold !important;
+}
 
 #spinner {
     height: 300px; }
@@ -69,10 +74,10 @@ body {
     margin-bottom: auto;
 }
 .carte-title h2 {
-    text-align: center;
+    /*text-align: center;*/
     margin:0;
     color: white;
-    font-size: 2em;
+    font-size: 1.6em;
 }
 .item-title h2 {
     text-align: center;
@@ -122,9 +127,32 @@ height: 100% !important;
 }
 .demo-card-header-pic .card-header {
     height: 40vw;
-    background-size: cover;
-    background-position: center;
+
 }
+th, td{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: 50px !important;
+    text-align: center;
+}
+.numeric-cell{
+    max-width: 35px !important;
+    text-align: center !important;
+}
+.burger{
+    background-size: 84%;
+    background-position-x: center;
+    background-position-y: 76%;
+    background-repeat: no-repeat;
+}
+
+.pizza{
+    background-size: 42%;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+}
+
 /*img{*/
 /*width:5%;*/
 /*height:auto;*/

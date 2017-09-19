@@ -2,6 +2,13 @@ Template.panelRight.helpers({
 
     cartitems: function(){
         return Cart.find({});
+    },
+
+});
+
+Template.cart_list.helpers({
+    total: function () {
+        return this.price * this.quantity;
     }
 });
 

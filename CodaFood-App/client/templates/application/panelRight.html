@@ -1,26 +1,62 @@
 <template name="panelRight">
     <div class="panel panel-right panel-cover">
-        <div class="view navbar-fixed" data-page="panel-right">
-            <div class="pages">
-                <div data-page="panel-right" class="page">
-                    <div class="navbar">
-                        <div class="navbar-inner">
-                            <div class="center">Paramètres</div>
+
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="center">Mon panier</div>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <div class="data-table data-table-init">
+                <div class="card-header">
+
+                        <div class="data-table-links">
+                            <a class="link">Add</a>
+                            <a class="link">Remove</a>
                         </div>
-                    </div>
-                    <div class="page-content">
-                        <div class="content-block">
-                            {{#each cartitems}}
-                                {{> cart_list}}
-                            {{/each}}
-                        </div>
-                    </div>
+                        <!-- Table actions -->
+                        <!--<div class="data-table-actions">-->
+                            <!--<a class="link icon-only"><i class="icon f7-icons">sort</i></a>-->
+                            <!--<a class="link icon-only"><i class="icon f7-icons">more</i></a>-->
+
+                    <!--</div>-->
                 </div>
+                <table>
+                    <thead>
+                    <tr>
+                        <th class="checkbox-cell">
+                            <label class="form-checkbox">
+                                <input type="checkbox"><i></i>
+                            </label>
+                        </th>
+                        <th class="label-cell">Produit</th>
+                        <th class="numeric-cell">Quantité</th>
+                        <th class="numeric-cell">Prix</th>
+                        <th class="numeric-cell">Total</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {{#each cartitems}}
+                        {{> cart_list}}
+                    {{/each}}
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
 </template>
 
 <template name="cart_list">
-    <p>{{product}} : {{quantity}}</p>
+    <tr>
+        <td class="checkbox-cell">
+            <label class="form-checkbox">
+                <input type="checkbox"><i></i>
+            </label>
+        </td>
+        <td class="label-cell">{{product}}</td>
+        <td class="numeric-cell">{{quantity}}</td>
+        <td class="numeric-cell">{{price}}</td>
+        <td class="numeric-cell">{{total}}</td>
+    </tr>
 </template>

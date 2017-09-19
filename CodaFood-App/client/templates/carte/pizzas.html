@@ -11,7 +11,7 @@
     <div class="content-block-title pizza-title">{{name}}</div>
 
     <div class="card demo-card-header-pic inset">
-        <div style="background-image:url('/images/{{image}}')" valign="bottom" class="card-header color-white no-border">
+        <div style="background-image:url('/images/{{image}}')" valign="bottom" class="card-header {{categorie}} color-white no-border">
         </div>
         <div class="card-content color-white">
             <div class="card-content-inner">
@@ -20,7 +20,7 @@
             </div>
         </div>
         <div class="card-footer">
-            {{#if bought }} <p class="modifycart buttons-row">
+            {{#if bought }} <p class="modifycart buttons-row" data="-">
                 <a  class="button button-fill button-raised ">-</a>
             </p>
             {{/if}}

@@ -17,6 +17,13 @@ Template.pizza.helpers({
         if(Cart.findOne({product: this.name}) ){
             return true;
         }
+    },
+    categorie: function(){
+        if(Iron.Location.get().path.indexOf("Pizzas") !== -1){
+            return "pizza";
+        } else {
+            return "burger"
+        }
     }
 });
 Template.pizzas.events({
@@ -25,12 +32,12 @@ Template.pizzas.events({
     'click .modifycart'(event) {
         // event.preventDefault();
         let product = this.name;
-        let inc = 1;
-        let op = event.target.firstChild.textContent;
+        let inc;
+        let op = event.target.textContent;
         let findOneProd = Cart.findOne({product: product});
-        if(op ==="+"){
+        if(op === "+"){
             inc= 1;
-        } else if(op ==="-"){
+        } else if(op === "-"){
             inc= -1;
         }
         if(findOneProd ){
@@ -45,7 +52,7 @@ Template.pizzas.events({
                     })
             }
         } else {
-            Cart.insert({'product' :product, 'quantity': 1, 'categorie': this.categorie});
+            Cart.insert({'product' :product, 'quantity': 1, 'price': this.price});
         }
     }
 });
