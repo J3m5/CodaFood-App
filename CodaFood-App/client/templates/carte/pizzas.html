@@ -20,8 +20,8 @@
             </div>
         </div>
         <div class="card-footer">
-            {{#if bought }} <p class="modifycart buttons-row" data="-">
-                <a  class="button button-fill button-raised ">-</a>
+            {{#if bought }} <p class="modifycart buttons-row">
+                <a  class="button button-fill button-raised "><i class="material-icons">remove</i></a>
             </p>
             {{/if}}
             <div class="list-block nb-added">
@@ -39,7 +39,7 @@
             </div>
 
             <p class="modifycart buttons-row">
-                <a  class="button button-fill button-raised">{{#unless bought }}Add to cart {{else}}+{{/unless}}</a>
+                <a  class="button button-fill button-raised">{{#unless bought }}Add to cart {{else}}<i class="material-icons">add</i>{{/unless}}</a>
             </p>
 
 

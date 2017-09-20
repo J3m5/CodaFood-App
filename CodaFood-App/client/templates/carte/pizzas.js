@@ -1,10 +1,3 @@
-//
-// Template.pizzas.helpers({
-//     pizzas: function() {
-//         return Pizzas.find({});
-//     },
-//
-// });
 Template.pizza.helpers({
     qty : function(){
         if(Cart.findOne({product: this.name}) ){
@@ -35,9 +28,9 @@ Template.pizzas.events({
         let inc;
         let op = event.target.textContent;
         let findOneProd = Cart.findOne({product: product});
-        if(op === "+"){
+        if(op === "add"){
             inc= 1;
-        } else if(op === "-"){
+        } else if(op === "remove"){
             inc= -1;
         }
         if(findOneProd ){
@@ -52,7 +45,7 @@ Template.pizzas.events({
                     })
             }
         } else {
-            Cart.insert({'product' :product, 'quantity': 1, 'price': this.price});
+            Cart.insert({'product' :product, 'quantity': 1, 'price': this.price, 'checked':false});
         }
     }
 });

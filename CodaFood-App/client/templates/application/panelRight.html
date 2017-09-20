@@ -1,25 +1,22 @@
 <template name="panelRight">
     <div class="panel panel-right panel-cover">
-
         <div class="navbar">
             <div class="navbar-inner">
                 <div class="center">Mon panier</div>
             </div>
         </div>
-
-        <div class="content-block">
+        <div class="content-block content-block-rPanel">
             <div class="data-table data-table-init">
                 <div class="card-header">
-
                         <div class="data-table-links">
-                            <a class="link">Add</a>
-                            <a class="link">Remove</a>
+                            <a class="link icon-only left modifycart"><i class="material-icons">add</i></a>
+                            <a class="link icon-only center modifycart"><i class="material-icons">remove</i></a>
+                            <a class="link icon-only right modifycart"><i class="material-icons">delete</i></a>
                         </div>
                         <!-- Table actions -->
                         <!--<div class="data-table-actions">-->
                             <!--<a class="link icon-only"><i class="icon f7-icons">sort</i></a>-->
                             <!--<a class="link icon-only"><i class="icon f7-icons">more</i></a>-->
-
                     <!--</div>-->
                 </div>
                 <table>
@@ -48,10 +45,10 @@
 </template>
 
 <template name="cart_list">
-    <tr>
+    <tr class="product" id="{{product}}" >
         <td class="checkbox-cell">
             <label class="form-checkbox">
-                <input type="checkbox"><i></i>
+                <input type="checkbox" class="check-box" checked="{{checked}}"><i></i>
             </label>
         </td>
         <td class="label-cell">{{product}}</td>

@@ -125,6 +125,9 @@ height: 100% !important;
 .content{
     background-color: inherit;
 }
+.content-block-rPanel{
+    padding:0 8px !important;
+}
 .demo-card-header-pic .card-header {
     height: 40vw;
 
@@ -134,6 +137,10 @@ th, td{
     padding-right: 0 !important;
     max-width: 50px !important;
     text-align: center;
+}
+.form-checkbox i:after,.form-checkbox i, label.label-checkbox i.icon-form-checkbox:after{
+    width: 25px !important;
+    height: 25px !important;
 }
 .numeric-cell{
     max-width: 35px !important;
