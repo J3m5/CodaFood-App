@@ -8,10 +8,11 @@
         <div class="content-block content-block-rPanel">
             <div class="data-table data-table-init">
                 <div class="card-header">
+                    {{total}}
                         <div class="data-table-links">
-                            <a class="link icon-only left modifycart"><i class="material-icons">add</i></a>
-                            <a class="link icon-only center modifycart"><i class="material-icons">remove</i></a>
-                            <a class="link icon-only right modifycart"><i class="material-icons">delete</i></a>
+                            <a class="link icon-only left inc" id="1"><i class="material-icons">add</i></a>
+                            <a class="link icon-only center inc" id="-1"><i class="material-icons">remove</i></a>
+                            <a class="link icon-only right delete"><i class="material-icons">delete</i></a>
                         </div>
                         <!-- Table actions -->
                         <!--<div class="data-table-actions">-->
@@ -23,8 +24,8 @@
                     <thead>
                     <tr>
                         <th class="checkbox-cell">
-                            <label class="form-checkbox">
-                                <input type="checkbox"><i></i>
+                            <label class="form-checkbox allin">
+                                <input type="checkbox" class="check-box chk"><i></i>
                             </label>
                         </th>
                         <th class="label-cell">Produit</th>
