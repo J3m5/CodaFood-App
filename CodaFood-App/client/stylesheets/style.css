@@ -94,28 +94,18 @@ body {
     margin-bottom: 6px !important;
 }
 .nb-added{
-    width: 15vw;
-    /*margin-left: 42% !important;*/
-    /*margin-right: auto !important;*/
+
 }
-.modifycart > a{
-    font-size: 3em !important;
-height: 100% !important;
-    line-height: inherit !important;
-}
-.modifycart{
-    margin: 0 !important;
-    line-height: 50px !important;
-    height: 50px !important;
-}
+
 .card-footer{
 
 }
-.list-block input[type=number]{
+.list-block .item-input input[type=number]{
     font-size: 20px;
     font-weight: bold;
     letter-spacing: 1px;
     text-align: center;
+    height: 100%;
 }
 .categorie {
     /*width: 20%;*/
@@ -125,8 +115,12 @@ height: 100% !important;
 .content{
     background-color: inherit;
 }
-.content-block-rPanel{
-    padding:0 8px !important;
+div .content-block.right-panel{
+    padding:0 8px;
+    margin-top:0px;
+}
+.right-panel .card-header{
+    padding: 4px 9px;
 }
 .demo-card-header-pic .card-header {
     height: 40vw;
@@ -151,7 +145,90 @@ th, td{
     background-position-y: 76%;
     background-repeat: no-repeat;
 }
+div .card-footer{
+    min-height: 15px;
+}
+div .button > i {
+    display: block ;
+    line-height: inherit;
+}
+div .add-to-cart{
+    padding: 0 20vw;
+    display: block;
+    box-shadow: inset 0px 0px 1px 0px #4caf50,
+    0 1px 3px rgba(0,0,0,.12),
+    0 1px 2px rgba(0,0,0,.24);
+}
+.button.add{
+    box-shadow: inset 0px 0px 1px 0px #4caf50,
+    0 1px 3px rgba(0,0,0,.12),
+    0 1px 2px rgba(0,0,0,.24);
+}
 
+a.button.add .ripple-wave {
+    background-color: #4caf50;
+}
+
+.button.remove{
+    box-shadow: inset 0px 0px 1px 0px #f44336,
+    0 1px 3px rgba(0,0,0,.12),
+    0 1px 2px rgba(0,0,0,.24);
+}
+
+a.button.remove .ripple-wave {
+    background-color: #f44336;
+}
+.button.number{
+    box-shadow: inset 0px 0px 1px 0px white,
+    0 1px 3px rgba(0,0,0,.12),
+    0 1px 2px rgba(0,0,0,.24);
+}
+
+.fade-out{
+    animation-name: fadeout;
+    animation-duration: 0.5s ;
+}
+
+@keyframes fadeout {
+    0% {opacity: 1}
+    100% {opacity: 0}
+}
+div p.modifycart{
+    margin: 5px auto;
+}
+
+.content-block.right-panel{
+
+}
+a div.list-block{
+    height: 100%;
+}
+
+div.list-block div.item-input{
+    height:100%;
+    margin-bottom: 0;
+}
+.modifycart a.button{
+    background: transparent;
+    animation-name : appeare;
+    animation-duration: 0.7s;
+}
+
+@keyframes appeare {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+.page-content{
+    background-image: url("/images/bg.png");
+}
+
+.products div.card-header{
+    box-shadow: inset black 0px 2px 20px 3px;
+}
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
 .pizza{
     background-size: 42%;
     background-position-x: center;

@@ -1,45 +1,53 @@
 <template name="panelRight">
     <div class="panel panel-right panel-cover">
-        <div class="navbar">
-            <div class="navbar-inner">
-                <div class="center">Mon panier</div>
-            </div>
-        </div>
-        <div class="content-block content-block-rPanel">
-            <div class="data-table data-table-init">
-                <div class="card-header">
-                    {{total}}
-                        <div class="data-table-links">
-                            <a class="link icon-only left inc" id="1"><i class="material-icons">add</i></a>
-                            <a class="link icon-only center inc" id="-1"><i class="material-icons">remove</i></a>
-                            <a class="link icon-only right delete"><i class="material-icons">delete</i></a>
+        <div class="view navbar-fixed" data-page="panel-right">
+            <div class="pages">
+                <div data-page="panel-right" class="page">
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="center">Mon panier</div>
                         </div>
-                        <!-- Table actions -->
-                        <!--<div class="data-table-actions">-->
-                            <!--<a class="link icon-only"><i class="icon f7-icons">sort</i></a>-->
-                            <!--<a class="link icon-only"><i class="icon f7-icons">more</i></a>-->
-                    <!--</div>-->
+                    </div>
+                    <div class="page-content">
+                        <div class="content-block right-panel">
+                            <div class="data-table data-table-init">
+                                <div class="card-header">
+                                    {{total}}
+                                    <p class="buttons-row">
+                                        <a class="button button-raised add left inc" id="1"><i class="material-icons color-green">add</i></a>
+                                        <a class="button button-raised right remove delete"><i class="material-icons color-red">delete</i></a>
+                                        <a class="button button-raised center remove inc" id="-1"><i class="material-icons color-red">remove</i></a>
+                                    </p>
+                                    <!-- Table actions -->
+                                    <!--<div class="data-table-actions">-->
+                                    <!--<a class="link icon-only"><i class="icon f7-icons">sort</i></a>-->
+                                    <!--<a class="link icon-only"><i class="icon f7-icons">more</i></a>-->
+                                    <!--</div>-->
+                                </div>
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <th class="checkbox-cell">
+                                            <label class="form-checkbox allin">
+                                                <input type="checkbox" class="check-box chk"><i></i>
+                                            </label>
+                                        </th>
+                                        <th class="label-cell">Produit</th>
+                                        <th class="numeric-cell">Quantité</th>
+                                        <th class="numeric-cell">Prix</th>
+                                        <th class="numeric-cell">Total</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {{#each cartitems}}
+                                        {{> cart_list}}
+                                    {{/each}}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <table>
-                    <thead>
-                    <tr>
-                        <th class="checkbox-cell">
-                            <label class="form-checkbox allin">
-                                <input type="checkbox" class="check-box chk"><i></i>
-                            </label>
-                        </th>
-                        <th class="label-cell">Produit</th>
-                        <th class="numeric-cell">Quantité</th>
-                        <th class="numeric-cell">Prix</th>
-                        <th class="numeric-cell">Total</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    {{#each cartitems}}
-                        {{> cart_list}}
-                    {{/each}}
-                    </tbody>
-                </table>
             </div>
         </div>
     </div>

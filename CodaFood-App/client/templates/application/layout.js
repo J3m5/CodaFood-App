@@ -19,7 +19,8 @@ Template.layout.onRendered(function () {
         material: true,
         materialRipple: true,
         materialRippleElements: '.ripple, a.link, a.item-link, .button, .modal-button, .tab-link, .label-radio, .label-checkbox, .actions-modal-button, a.searchbar-clear, .floating-button',
-        sortable: false
+        sortable: false,
+        cache: false
     });
 
     // If we need to use custom DOM library, let's save it to $$ letiable:

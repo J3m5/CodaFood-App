@@ -8,7 +8,9 @@ Template.pizza.helpers({
     },
     bought: function () {
         if(Cart.findOne({product: this.name}) ){
-            return true;
+
+                return true;
+
         }
     },
     categorie: function(){
@@ -22,10 +24,11 @@ Template.pizza.helpers({
 Template.pizzas.events({
 
 
-    'click .modifycart'(event) {
+    'click .modifycart'(event,template) {
         // event.preventDefault();
         let product = this.name;
         let inc;
+        let price = this.price;
         let op = event.target.textContent;
         let findOneProd = Cart.findOne({product: product});
         if(op === "add"){
@@ -35,7 +38,10 @@ Template.pizzas.events({
         }
         if(findOneProd ){
             if(Cart.findOne({product: product}).quantity === 1 && inc === -1){
-                Cart.remove({product: product})
+                $('.remove').addClass('fade-out');
+                Meteor.setTimeout(function(){
+                Cart.remove({product: product});
+                }, 2000)
             }else{
                 Cart.update({product : product},
                     {
@@ -45,7 +51,9 @@ Template.pizzas.events({
                     })
             }
         } else {
-            Cart.insert({'product' :product, 'quantity': 1, 'price': this.price, 'checked':false});
+            Meteor.setTimeout(function(){
+            Cart.insert({'product' :product, 'quantity': 1, 'price': price, 'checked':false});
+            }, 300)
         }
     }
 });

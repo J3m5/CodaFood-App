@@ -1,5 +1,5 @@
 <template name="pizzas">
-    <div class="content segue-right-to-left">
+    <div class="content products segue-right-to-left">
         {{#each pizz in pizzas}}
             {{>pizza pizz}}
         {{/each}}
@@ -11,39 +11,38 @@
     <div class="content-block-title pizza-title">{{name}}</div>
 
     <div class="card demo-card-header-pic inset">
-        <div style="background-image:url('/images/{{image}}')" valign="bottom" class="card-header {{categorie}} color-white no-border">
+        <div style="background-image:url('/images/{{image}}'),url('/images/bg1.jpeg');background-size: contain,cover " valign="bottom" class="card-header {{categorie}} color-white no-border">
         </div>
+
         <div class="card-content color-white">
             <div class="card-content-inner">
                 <p class="color-gray">{{price}}€</p>
                 <p>{{description}}</p>
             </div>
         </div>
+
         <div class="card-footer">
-            {{#if bought }} <p class="modifycart buttons-row">
-                <a  class="button button-fill button-raised "><i class="material-icons">remove</i></a>
-            </p>
-            {{/if}}
-            <div class="list-block nb-added">
-                <ul>
-                    <li>
-                        <div class="item-content">
-                            <div class="item-inner">
-                                <div class="item-input">
-                                    <input type="number" placeholder="" value="{{qty}}">
-                                </div>
+            <p class="modifycart buttons-row">
+                {{#unless bought }}
+                    <a  class="button button-big button-raised add-to-cart">
+                        <i class="material-icons md-36 color-green">add_shopping_cart</i>
+                    </a>
+                {{else}}
+                    <a  class="button button-big button-raised remove">
+                        <i class="material-icons md-36">remove</i>
+                    </a>
+                    <a  class="button button-big button-raised number">
+                        <div class="list-block">
+                            <div class="item-input">
+                                <input type="number" placeholder="" value="{{qty}}">
                             </div>
                         </div>
-                    </li>
-                </ul>
-            </div>
-
-            <p class="modifycart buttons-row">
-                <a  class="button button-fill button-raised">{{#unless bought }}Add to cart {{else}}<i class="material-icons">add</i>{{/unless}}</a>
+                    </a>
+                    <a  class="button button-big button-raised add">
+                        <i class="material-icons md-36 color-green">add</i>
+                    </a>
+                {{/unless}}
             </p>
-
-
-
         </div>
     </div>
 </template>
