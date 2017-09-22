@@ -1,17 +1,17 @@
-<template name="pizzas">
+<template name="produits">
     <div class="content products segue-right-to-left">
-        {{#each pizz in pizzas}}
-            {{>pizza pizz}}
+        {{#each element in produits}}
+            {{>produit element}}
         {{/each}}
     </div>
 </template>
 
-<template name="pizza">
-
+<template name="produit">
     <div class="content-block-title pizza-title">{{name}}</div>
 
     <div class="card demo-card-header-pic inset">
-        <div style="background-image:url('/images/{{image}}'),url('/images/bg1.jpeg');background-size: contain,cover " valign="bottom" class="card-header {{categorie}} color-white no-border">
+        <div style="background-image:url('/images/{{image}}'),url('/images/bg1.jpeg');background-size: contain,cover "
+             valign="bottom" class="card-header {{categorie}} color-white no-border">
         </div>
 
         <div class="card-content color-white">
@@ -24,21 +24,21 @@
         <div class="card-footer">
             <p class="modifycart buttons-row">
                 {{#unless bought }}
-                    <a  class="button button-big button-raised add-to-cart">
+                    <a class="button button-big button-raised add-to-cart fade-in">
                         <i class="material-icons md-36 color-green">add_shopping_cart</i>
                     </a>
                 {{else}}
-                    <a  class="button button-big button-raised remove">
+                    <a class="button button-big button-raised remove fade-in">
                         <i class="material-icons md-36">remove</i>
                     </a>
-                    <a  class="button button-big button-raised number">
+                    <a class="button button-big button-raised number fade-in">
                         <div class="list-block">
                             <div class="item-input">
                                 <input type="number" placeholder="" value="{{qty}}">
                             </div>
                         </div>
                     </a>
-                    <a  class="button button-big button-raised add">
+                    <a class="button button-big button-raised add fade-in">
                         <i class="material-icons md-36 color-green">add</i>
                     </a>
                 {{/unless}}

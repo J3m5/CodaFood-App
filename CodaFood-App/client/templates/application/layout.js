@@ -1,5 +1,6 @@
 Template.layout.helpers({
     //add you helpers here
+
 });
 
 Template.layout.events({

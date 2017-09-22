@@ -1,0 +1,6 @@
+div.navbar div.title{
+    margin: inherit;
+    margin-left: auto;
+    font-size: 30px;
+    font-weight: bold;
+}

@@ -5,44 +5,45 @@
     margin-bottom: 10px;
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); }
-
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+}
 
 .btn-default:hover {
-    margin-top:8px !important;
+    margin-top: 8px !important;
     /*border-bottom-width: 3px !important;*/
 }
+
 body {
     background: #eee;
-    color: #666666; }
+    color: #666666;
+}
 
 #main {
     position: relative;
 }
+
 .page {
     position: absolute;
     top: 0;
     width: 100%;
 }
+
 .container-fluid {
     padding: 0;
     /*width: 100%;*/
 }
-.content{
-    padding-top:56px;
-}
-.navbar {
-    margin-bottom: 10px; }
-/* line 32, ../sass/style.scss */
-.navbar .title{
-    margin: inherit;
-    margin-left: auto !important;
-    font-size: 30px !important;
-    font-weight: bold !important;
+
+.content {
+    padding-top: 56px;
+    background-color: inherit;
 }
 
+/* line 32, ../sass/style.scss */
+
 #spinner {
-    height: 300px; }
+    height: 300px;
+}
+
 /*h2{*/
 /*text-align: center;*/
 /*margin: 0;*/
@@ -50,7 +51,7 @@ body {
 /*.carte-title{*/
 /*padding:0 !important;*/
 /*}*/
-.categories{
+.categories {
     /*width: 100%;*/
     /*height: auto;*/
     /*display: flex;*/
@@ -59,177 +60,204 @@ body {
     /*margin-left: auto;*/
     /*margin-right: auto;*/
 }
+
 .cat-list {
     margin: 0 0 !important;
 }
-.item-inner:after{
+
+.item-inner:after {
     /*height: 2px !important;*/
 }
-.item-media img{
+
+.item-media img {
     width: 10vh;
     height: auto;
 }
-.item-media{
+
+.item-media {
     margin-top: auto;
     margin-bottom: auto;
 }
+
 .carte-title h2 {
     /*text-align: center;*/
-    margin:0;
+    margin: 0;
     color: white;
     font-size: 1.6em;
 }
+
 .item-title h2 {
     text-align: center;
 }
-.carte-title{
+
+.carte-title {
     padding: 0 !important;
     line-height: 2em !important;
 }
-.pizza-title{
+
+.pizza-title {
     color: white !important;
     font-size: 2em !important;
     line-height: 1.2em !important;
     padding: 0 !important;
     margin-bottom: 6px !important;
 }
-.nb-added{
 
-}
-
-.card-footer{
-
-}
-.list-block .item-input input[type=number]{
+.list-block .item-input input[type=number] {
     font-size: 20px;
     font-weight: bold;
     letter-spacing: 1px;
     text-align: center;
     height: 100%;
 }
-.categorie {
-    /*width: 20%;*/
-    /*background-color: darkgrey;*/
-    /*height: 250px;*/
+
+div .content-block.right-panel {
+    padding: 0 8px;
+    margin-top: 0;
 }
-.content{
-    background-color: inherit;
-}
-div .content-block.right-panel{
-    padding:0 8px;
-    margin-top:0px;
-}
-.right-panel .card-header{
+
+.right-panel .card-header {
     padding: 4px 9px;
 }
+
 .demo-card-header-pic .card-header {
     height: 40vw;
 }
-th, td{
+
+th, td {
     padding-left: 0 !important;
     padding-right: 0 !important;
     max-width: 50px !important;
     text-align: center;
 }
-.form-checkbox i:after,.form-checkbox i, label.label-checkbox i.icon-form-checkbox:after{
+
+.form-checkbox i:after, .form-checkbox i, label.label-checkbox i.icon-form-checkbox:after {
     width: 25px !important;
     height: 25px !important;
 }
-.numeric-cell{
+
+.numeric-cell {
     max-width: 35px !important;
     text-align: center !important;
 }
-.burger{
+
+.burger {
     background-size: 84%;
     background-position-x: center;
     background-position-y: 76%;
     background-repeat: no-repeat;
 }
-div .card-footer{
+
+div .card-footer {
     min-height: 15px;
 }
+
 div .button > i {
-    display: block ;
+    display: block;
     line-height: inherit;
 }
-div .add-to-cart{
+
+div .add-to-cart {
     padding: 0 20vw;
     display: block;
     box-shadow: inset 0px 0px 1px 0px #4caf50,
-    0 1px 3px rgba(0,0,0,.12),
-    0 1px 2px rgba(0,0,0,.24);
+    0 1px 3px rgba(0, 0, 0, .12),
+    0 1px 2px rgba(0, 0, 0, .24);
 }
-.button.add{
+
+.button.add {
     box-shadow: inset 0px 0px 1px 0px #4caf50,
-    0 1px 3px rgba(0,0,0,.12),
-    0 1px 2px rgba(0,0,0,.24);
+    0 1px 3px rgba(0, 0, 0, .12),
+    0 1px 2px rgba(0, 0, 0, .24);
 }
 
 a.button.add .ripple-wave {
     background-color: #4caf50;
 }
 
-.button.remove{
+.button.remove {
     box-shadow: inset 0px 0px 1px 0px #f44336,
-    0 1px 3px rgba(0,0,0,.12),
-    0 1px 2px rgba(0,0,0,.24);
+    0 1px 3px rgba(0, 0, 0, .12),
+    0 1px 2px rgba(0, 0, 0, .24);
 }
 
 a.button.remove .ripple-wave {
     background-color: #f44336;
 }
-.button.number{
+
+.button.number {
     box-shadow: inset 0px 0px 1px 0px white,
-    0 1px 3px rgba(0,0,0,.12),
-    0 1px 2px rgba(0,0,0,.24);
+    0 1px 3px rgba(0, 0, 0, .12),
+    0 1px 2px rgba(0, 0, 0, .24);
 }
 
-.fade-out{
+.fade-out {
     animation-name: fadeout;
-    animation-duration: 0.5s ;
+    animation-duration: 0.35s;
 }
 
 @keyframes fadeout {
-    0% {opacity: 1}
-    100% {opacity: 0}
-}
-div p.modifycart{
-    margin: 5px auto;
-}
-
-.content-block.right-panel{
-
-}
-a div.list-block{
-    height: 100%;
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
 }
 
-div.list-block div.item-input{
-    height:100%;
-    margin-bottom: 0;
-}
-.modifycart a.button{
-    background: transparent;
-    animation-name : appeare;
-    animation-duration: 0.7s;
+.fade-in {
+    /*background: transparent;*/
+    animation-name: appeare;
+    animation-duration: 0.3s;
 }
 
 @keyframes appeare {
-    0% {opacity: 0}
-    100% {opacity: 1}
-}
-.page-content{
-    background-image: url("/images/bg.png");
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
 }
 
-.products div.card-header{
+div p.modifycart {
+    margin: 5px auto;
+}
+
+.content-block.right-panel {
+
+}
+
+a div.list-block {
+    height: 100%;
+}
+
+div.list-block div.item-input {
+    height: 100%;
+    margin-bottom: 0;
+}
+
+.products div.card-header {
     box-shadow: inset black 0px 2px 20px 3px;
 }
-.material-icons.md-18 { font-size: 18px; }
-.material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size: 36px; }
-.material-icons.md-48 { font-size: 48px; }
-.pizza{
+
+.material-icons.md-18 {
+    font-size: 18px;
+}
+
+.material-icons.md-24 {
+    font-size: 24px;
+}
+
+.material-icons.md-36 {
+    font-size: 36px;
+}
+
+.material-icons.md-48 {
+    font-size: 48px;
+}
+
+.pizza {
     background-size: 42%;
     background-position-x: center;
     background-position-y: center;
@@ -244,7 +272,7 @@ div.list-block div.item-input{
 /*!*margin-right: auto;*!*/
 /*}*/
 
-.categorie h2{
+.categorie h2 {
     text-align: center;
 }
 
@@ -254,7 +282,8 @@ div.list-block div.item-input{
     clear: both;
     line-height: 20px;
     color: #bbb;
-    white-space: nowrap; }
+    white-space: nowrap;
+}
 
 .load-more {
     display: block;
@@ -263,39 +292,59 @@ div.list-block div.item-input{
     text-align: center;
     height: 60px;
     line-height: 60px;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+}
+
 .load-more:hover {
     text-decoration: none;
-    background: rgba(0, 0, 0, 0.1); }
+    background: rgba(0, 0, 0, 0.1);
+}
 
-.posts .spinner-container{
+.posts .spinner-container {
     position: relative;
     height: 100px;
 }
 
-.jumbotron{
+.jumbotron {
     text-align: center;
 }
-.jumbotron h2{
+
+.jumbotron h2 {
     font-size: 60px;
     font-weight: 100;
 }
 
 @-webkit-keyframes fadeOut {
-    0% {opacity: 0;}
-    10% {opacity: 1;}
-    90% {opacity: 1;}
-    100% {opacity: 0;}
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 @keyframes fadeOut {
-    0% {opacity: 0;}
-    10% {opacity: 1;}
-    90% {opacity: 1;}
-    100% {opacity: 0;}
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
-.errors{
+.errors {
     position: fixed;
     z-index: 10000;
     padding: 10px;
@@ -305,6 +354,7 @@ div.list-block div.item-input{
     bottom: 0;
     pointer-events: none;
 }
+
 .alert {
     animation: fadeOut 2700ms ease-in 0s 1 forwards;
     -webkit-animation: fadeOut 2700ms ease-in 0s 1 forwards;

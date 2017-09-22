@@ -14,9 +14,15 @@
                                 <div class="card-header">
                                     {{total}}
                                     <p class="buttons-row">
-                                        <a class="button button-raised add left inc" id="1"><i class="material-icons color-green">add</i></a>
-                                        <a class="button button-raised right remove delete"><i class="material-icons color-red">delete</i></a>
-                                        <a class="button button-raised center remove inc" id="-1"><i class="material-icons color-red">remove</i></a>
+                                        <a class="button button-raised center remove inc" id="-1">
+                                            <i class="material-icons color-red">remove</i>
+                                        </a>
+                                        <a class="button button-raised right remove delete">
+                                            <i class="material-icons color-red">delete</i>
+                                        </a>
+                                        <a class="button button-raised add left inc" id="1">
+                                            <i class="material-icons color-green">add</i>
+                                        </a>
                                     </p>
                                     <!-- Table actions -->
                                     <!--<div class="data-table-actions">-->
@@ -54,7 +60,7 @@
 </template>
 
 <template name="cart_list">
-    <tr class="product" id="{{product}}" >
+    <tr class="product " id="{{product}}">
         <td class="checkbox-cell">
             <label class="form-checkbox">
                 <input type="checkbox" class="check-box" checked="{{checked}}"><i></i>
