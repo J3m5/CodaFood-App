@@ -1,0 +1,6 @@
+th, td {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: 50px !important;
+    text-align: center;
+}

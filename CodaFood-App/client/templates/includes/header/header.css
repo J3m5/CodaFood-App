@@ -4,3 +4,27 @@ div.navbar div.title{
     font-size: 30px;
     font-weight: bold;
 }
+
+.added{
+    /*color: #4caf50;*/
+    animation: add 0.3s;
+}
+.removed{
+    /*color: #f44336;*/
+    animation: remove 0.3s;
+}
+@keyframes add {
+    0% {color:white;}
+    50% {color: #4caf50}
+    100% {color: white;}
+}
+
+@keyframes remove {
+    0% {color:white;}
+    50% {color: #f44336}
+    100% {color: white;}
+}
+.navbar .right i {
+    color:white;
+    transition: color 0.3s ease;
+}

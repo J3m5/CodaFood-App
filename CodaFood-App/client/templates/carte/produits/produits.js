@@ -21,8 +21,7 @@ Template.produit.helpers({
 });
 Template.produits.events({
 
-    'click .modifycart'(event, template) {
-        // event.preventDefault();
+    'click .modify'(event) {
         let product = this.name;
         let inc;
         let price = this.price;
@@ -30,8 +29,16 @@ Template.produits.events({
         let findOneProd = Cart.findOne({product: product});
         if (op === "add") {
             inc = 1;
+            $('.right i').addClass('added');
+            Meteor.setTimeout(function(){
+                $('.right i').removeClass('added');
+            }, 300);
         } else if (op === "remove") {
             inc = -1;
+            $('.right i').addClass('removed');
+            Meteor.setTimeout(function(){
+                $('.right i').removeClass('removed');
+            }, 300);
         }
         if (findOneProd) {
             if (Cart.findOne({product: product}).quantity === 1 && inc === -1) {
@@ -50,8 +57,10 @@ Template.produits.events({
             }
         } else {
             $('.modifycart .add-to-cart').removeClass('fade-in').addClass('fade-out');
+            $('.right i').addClass('added');
             Meteor.setTimeout(function () {
                 Cart.insert({'product': product, 'quantity': 1, 'price': price, 'checked': false});
+                $('.right i').removeClass('added');
             }, 300)
         }
     }

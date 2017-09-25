@@ -6,21 +6,24 @@
                     <div class="navbar">
                         <div class="navbar-inner">
                             <div class="center">Mon panier</div>
+                            <div>{{total}} €</div>
+
                         </div>
                     </div>
                     <div class="page-content">
                         <div class="content-block right-panel">
                             <div class="data-table data-table-init">
                                 <div class="card-header">
-                                    {{total}}
+
                                     <p class="buttons-row">
-                                        <a class="button button-raised center remove inc" id="-1">
+                                        <a class="button button-raised left remove inc" id="-1">
                                             <i class="material-icons color-red">remove</i>
                                         </a>
-                                        <a class="button button-raised right remove delete">
+                                        <a class="button button-raised center remove delete">
                                             <i class="material-icons color-red">delete</i>
                                         </a>
-                                        <a class="button button-raised add left inc" id="1">
+
+                                        <a class="button button-raised add right inc" id="1">
                                             <i class="material-icons color-green">add</i>
                                         </a>
                                     </p>
@@ -45,7 +48,7 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    {{#each cartitems}}
+                                    {{#each cartItems}}
                                         {{> cart_list}}
                                     {{/each}}
                                     </tbody>
@@ -53,22 +56,18 @@
                             </div>
                         </div>
                     </div>
+                    {{#if cartNotEmpty}}
+                        <div class="toolbar toolbar-bottom">
+                            <div class="toolbar-inner">
+                                <a class="button button-big button-raised modify color-green add-to-cart fade-in">
+                                    Commander
+                                    <!--<i class="material-icons md-36 color-green">add_shopping_cart</i>-->
+                                </a>
+                            </div>
+                        </div>
+                    {{/if}}
                 </div>
             </div>
         </div>
     </div>
-</template>
-
-<template name="cart_list">
-    <tr class="product " id="{{product}}">
-        <td class="checkbox-cell">
-            <label class="form-checkbox">
-                <input type="checkbox" class="check-box" checked="{{checked}}"><i></i>
-            </label>
-        </td>
-        <td class="label-cell">{{product}}</td>
-        <td class="numeric-cell">{{quantity}}</td>
-        <td class="numeric-cell">{{price}}</td>
-        <td class="numeric-cell">{{total}}</td>
-    </tr>
 </template>

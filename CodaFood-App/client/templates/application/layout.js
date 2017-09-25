@@ -23,7 +23,9 @@ Template.layout.onRendered(function () {
         sortable: false,
         cache: false
     });
-
+    // Session.set('myApp', myApp);
+    // let app = Session.get('myApp');
+    // console.log(app.params.swipePanel);
     // If we need to use custom DOM library, let's save it to $$ letiable:
     let $$ = Dom7;
 });

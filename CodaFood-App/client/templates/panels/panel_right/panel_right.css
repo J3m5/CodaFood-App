@@ -1,3 +1,51 @@
-.empty{
-    display: none !important;
+div .content-block.right-panel {
+    padding: 0 8px;
+    margin-top: 0;
+}
+
+.right-panel .card-header {
+    padding: 4px 9px;
+    position: fixed;
+}
+
+.pages .page .toolbar, .pages .page .toolbar-bottom{
+    background: inherit;
+}
+
+/*.pages .page .toolbar-bottom:before {*/
+    /*content: '';*/
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*top: 0;*/
+    /*bottom: auto;*/
+    /*right: auto;*/
+    /*height: 1px;*/
+    /*width: 100%;*/
+    /*background-color: #393939;*/
+    /*display: block;*/
+    /*z-index: 15;*/
+    /*-webkit-transform-origin: 50% 0;*/
+    /*transform-origin: 50% 0;*/
+/*}*/
+
+.toolbar-inner .button{
+    margin-left: auto;
+    margin-right:auto;
+    font-size: 25px;
+    padding-left: 25px;
+    padding-right:25px;
+}
+
+.page .toolbar{
+    height: 64px;
+}
+
+.page .toolbar-bottom{
+    background: transparent !important;
+}
+
+.data-table table{
+    /*overflow: hidden;*/
+    margin-top: 75px !important;
+    z-index: -5 !important;
 }

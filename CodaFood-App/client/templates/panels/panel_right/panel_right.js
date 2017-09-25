@@ -1,13 +1,19 @@
 Template.panelRight.helpers({
 
-    cartitems: function () {
+    cartItems: function () {
         return Cart.find({});
     },
-    total: function () {
+    total: function(){
         const col = Cart.find();
+        let total = 0;
         col.forEach(function (el) {
-            return el.quantity * el.price;
-        })
+            let subTotal = el.quantity * el.price;
+            total = total + subTotal;
+        });
+        return total;
+    },
+    cartNotEmpty: function(){
+        return !!Cart.find().count();
     }
 });
 
@@ -42,11 +48,20 @@ Template.panelRight.events({
             $(".chk").prop("checked", false);
         }
 
+    },
+    'click .delete': function(event){
+        const col = Cart.find({checked: true}).fetch();
+        col.forEach(function (el) {
+                Cart.remove({product: el.product})
+            });
+        if (Cart.find().count() === 0) {
+            $(".chk").prop("checked", false);
+        }
     }
 });
 
 Template.cart_list.helpers({
-    total: function () {
+    subTotal: function () {
         return this.price * this.quantity;
     },
     checked: function () {
