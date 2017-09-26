@@ -10,29 +10,36 @@
 
                         </div>
                     </div>
+                    {{#if cartNotEmpty}}
+                        <div class="toolbar toolbar-bottom">
+                            <div class="toolbar-inner">
+                                <a class="button button-big button-raised modify color-green add-to-cart fade-in">
+                                    Commander
+                                    <!--<i class="material-icons md-36 color-green">add_shopping_cart</i>-->
+                                </a>
+                            </div>
+                        </div>
+                    {{/if}}
+
                     <div class="page-content">
+                        <div class="card-header">
+
+                            <p class="buttons-row">
+                                <a class="button button-raised left remove inc" id="-1">
+                                    <i class="material-icons color-red">remove</i>
+                                </a>
+                                <a class="button button-raised center remove delete">
+                                    <i class="material-icons color-red">delete</i>
+                                </a>
+
+                                <a class="button button-raised add right inc" id="1">
+                                    <i class="material-icons color-green">add</i>
+                                </a>
+                            </p>
+                        </div>
                         <div class="content-block right-panel">
                             <div class="data-table data-table-init">
-                                <div class="card-header">
 
-                                    <p class="buttons-row">
-                                        <a class="button button-raised left remove inc" id="-1">
-                                            <i class="material-icons color-red">remove</i>
-                                        </a>
-                                        <a class="button button-raised center remove delete">
-                                            <i class="material-icons color-red">delete</i>
-                                        </a>
-
-                                        <a class="button button-raised add right inc" id="1">
-                                            <i class="material-icons color-green">add</i>
-                                        </a>
-                                    </p>
-                                    <!-- Table actions -->
-                                    <!--<div class="data-table-actions">-->
-                                    <!--<a class="link icon-only"><i class="icon f7-icons">sort</i></a>-->
-                                    <!--<a class="link icon-only"><i class="icon f7-icons">more</i></a>-->
-                                    <!--</div>-->
-                                </div>
                                 <table>
                                     <thead>
                                     <tr>
@@ -56,16 +63,7 @@
                             </div>
                         </div>
                     </div>
-                    {{#if cartNotEmpty}}
-                        <div class="toolbar toolbar-bottom">
-                            <div class="toolbar-inner">
-                                <a class="button button-big button-raised modify color-green add-to-cart fade-in">
-                                    Commander
-                                    <!--<i class="material-icons md-36 color-green">add_shopping_cart</i>-->
-                                </a>
-                            </div>
-                        </div>
-                    {{/if}}
+
                 </div>
             </div>
         </div>
