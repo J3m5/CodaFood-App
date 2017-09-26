@@ -1,106 +1,35 @@
-/*.grid-block, .main, .post, .comments li, .comment-form {*/
-    /*background: #fff;*/
-    /*border-radius: 3px;*/
-    /*padding: 10px;*/
-    /*margin-bottom: 10px;*/
-    /*-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);*/
-    /*-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);*/
-    /*box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);*/
-/*}*/
-
-/*.btn-default:hover {*/
-    /*margin-top: 8px !important;*/
-    /*!*border-bottom-width: 3px !important;*!*/
-/*}*/
-
-/*body {*/
-    /*background: #eee;*/
-    /*color: #666666;*/
-/*}*/
-
-/*#main {*/
-    /*position: relative;*/
-/*}*/
-
 .page {
-    position: absolute;
-    top: 0;
-    width: 100%;
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*width: 100%;*/
 }
-
-/*.container-fluid {*/
-    /*padding: 0;*/
-    /*!*width: 100%;*!*/
-/*}*/
-
 .content {
     padding-top: 56px;
     background-color: inherit;
 }
-
-/* line 32, ../sass/style.scss */
-
-/*#spinner {*/
-    /*height: 300px;*/
-/*}*/
-
-/*h2{*/
-/*text-align: center;*/
-/*margin: 0;*/
-/*}*/
-/*.carte-title{*/
-/*padding:0 !important;*/
-/*}*/
-/*.categories {*/
-    /*width: 100%;*/
-    /*height: auto;*/
-    /*display: flex;*/
-    /*flex-direction: row;*/
-    /*align-items: center;*/
-    /*margin-left: auto;*/
-    /*margin-right: auto;*/
-/*}*/
-
 .cat-list {
     margin: 0 0 !important;
 }
-
-/*.item-inner:after {*/
-    /*height: 2px !important;*/
-/*}*/
-
 .item-media img {
     width: 10vh;
     height: auto;
 }
-
 .item-media {
     margin-top: auto;
     margin-bottom: auto;
 }
-
 .carte-title h2 {
     /*text-align: center;*/
     margin: 0;
     color: white;
     font-size: 1.6em;
 }
-
 .item-title h2 {
     text-align: center;
 }
-
 .carte-title {
     padding: 0 !important;
     line-height: 2em !important;
-}
-
-.pizza-title {
-    color: white !important;
-    font-size: 2em !important;
-    line-height: 1.2em !important;
-    padding: 0 !important;
-    margin-bottom: 6px !important;
 }
 
 .list-block .item-input input[type=number] {
@@ -110,137 +39,25 @@
     text-align: center;
     height: 100%;
 }
-
-
-
-
-
 .demo-card-header-pic .card-header {
     height: 40vw;
 }
-
-
-
-.form-checkbox i:after, .form-checkbox i, label.label-checkbox i.icon-form-checkbox:after {
-    width: 25px !important;
-    height: 25px !important;
-}
-
 a div.list-block {
     height: 100%;
 }
-
 div.list-block div.item-input {
     height: 100%;
     margin-bottom: 0;
 }
-
-
-
 .material-icons.md-18 {
     font-size: 18px;
 }
-
 .material-icons.md-24 {
     font-size: 24px;
 }
-
 .material-icons.md-36 {
     font-size: 36px;
 }
-
 .material-icons.md-48 {
     font-size: 48px;
 }
-
-
-
-/*.dropdown-menu span {*/
-    /*display: block;*/
-    /*padding: 3px 20px;*/
-    /*clear: both;*/
-    /*line-height: 20px;*/
-    /*color: #bbb;*/
-    /*white-space: nowrap;*/
-/*}*/
-
-/*.load-more {*/
-    /*display: block;*/
-    /*border-radius: 3px;*/
-    /*background: rgba(0, 0, 0, 0.05);*/
-    /*text-align: center;*/
-    /*height: 60px;*/
-    /*line-height: 60px;*/
-    /*margin-bottom: 10px;*/
-/*}*/
-
-/*.load-more:hover {*/
-    /*text-decoration: none;*/
-    /*background: rgba(0, 0, 0, 0.1);*/
-/*}*/
-
-/*.posts .spinner-container {*/
-    /*position: relative;*/
-    /*height: 100px;*/
-/*}*/
-
-/*.jumbotron {*/
-    /*text-align: center;*/
-/*}*/
-
-/*.jumbotron h2 {*/
-    /*font-size: 60px;*/
-    /*font-weight: 100;*/
-/*}*/
-
-/*@-webkit-keyframes fadeOut {*/
-    /*0% {*/
-        /*opacity: 0;*/
-    /*}*/
-    /*10% {*/
-        /*opacity: 1;*/
-    /*}*/
-    /*90% {*/
-        /*opacity: 1;*/
-    /*}*/
-    /*100% {*/
-        /*opacity: 0;*/
-    /*}*/
-/*}*/
-
-/*@keyframes fadeOut {*/
-    /*0% {*/
-        /*opacity: 0;*/
-    /*}*/
-    /*10% {*/
-        /*opacity: 1;*/
-    /*}*/
-    /*90% {*/
-        /*opacity: 1;*/
-    /*}*/
-    /*100% {*/
-        /*opacity: 0;*/
-    /*}*/
-/*}*/
-
-/*.errors {*/
-    /*position: fixed;*/
-    /*z-index: 10000;*/
-    /*padding: 10px;*/
-    /*top: 0;*/
-    /*left: 0;*/
-    /*right: 0;*/
-    /*bottom: 0;*/
-    /*pointer-events: none;*/
-/*}*/
-
-/*.alert {*/
-    /*animation: fadeOut 2700ms ease-in 0s 1 forwards;*/
-    /*-webkit-animation: fadeOut 2700ms ease-in 0s 1 forwards;*/
-    /*-moz-animation: fadeOut 2700ms ease-in 0s 1 forwards;*/
-    /*width: 250px;*/
-    /*float: right;*/
-    /*clear: both;*/
-    /*margin-bottom: 5px;*/
-    /*pointer-events: auto;*/
-/*}*/

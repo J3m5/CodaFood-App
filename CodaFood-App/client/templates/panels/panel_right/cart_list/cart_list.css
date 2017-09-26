@@ -4,3 +4,44 @@ th, td {
     max-width: 50px !important;
     text-align: center;
 }
+
+.form-checkbox  i{
+    border: 1px solid #6d6d6d;
+}
+
+.form-checkbox i:after, .form-checkbox i, label.label-checkbox i.icon-form-checkbox:after {
+    width: 25px;
+    height: 25px;
+}
+/*.checkbox-cell .form-checkbox input[type=checkbox]{*/
+    /*border-color: #f44336;*/
+/*}*/
+ .theme-red .checkbox-cell .form-checkbox input[type=checkbox]:checked~i {
+    border-color: #f44336;
+    background-color: transparent;
+}
+ .product td:last-child{
+     font-size: 15px;
+ }
+.product td:last-child:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    /*top: 50%;*/
+    /*bottom: auto;*/
+    right: auto;
+    height: 70%;
+    width: 1px;
+    background-color: #393939;
+    display: block;
+    z-index: 15;
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    transform: scaleX(.5) translateY(-75%);
+}
+
+.product td:not(:last-child){
+    font-size: 13px;
+}
+
+/*.product tr:nth-child(even) {background-color: #f2f2f2;}*/

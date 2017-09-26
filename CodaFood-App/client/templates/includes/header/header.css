@@ -1,8 +1,32 @@
-div.navbar div.title{
+.navbar .navbar-inner .title{
     margin: inherit;
     margin-left: auto;
-    font-size: 30px;
+    font-size: 40px;
+    line-height: 30px;
     font-weight: bold;
+
+}
+.navbar i.icon.icon-bars {
+    width: 28px;
+    height: 28px;
+    /*box-shadow: inset 2px 4px 3px rgba(0,0,0,0.35);*/
+}
+
+.navbar i.material-icons{
+    font-size: 26px;
+}
+/*.navbar-inner .title a i{*/
+    /*box-shadow: 2px 4px 3px rgba(0,0,0,0.35);*/
+    /*color: white;*/
+/*}*/
+
+a i {
+    text-shadow: 0px  -1px 0 rgba(0,0,0,.5)
+}
+
+.navbar .title, .navbar .navbar-inner{
+    font-family: "Lobster Two", Roboto, Noto, Helvetica, Arial, sans-serif;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 
 .added{

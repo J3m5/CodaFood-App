@@ -3,6 +3,14 @@ div .content-block.right-panel {
     margin-top: 0;
 }
 
+.panel-right .navbar .title, .navbar .navbar-inner{
+    font-size: 1.2em;
+
+}
+
+.panel-right .navbar .title, .left-title{
+    margin-left: 20px;
+}
 .right-panel .card-header {
     padding: 4px 9px;
     position: fixed;
@@ -27,7 +35,11 @@ div .content-block.right-panel {
 .page .toolbar-bottom{
     background: transparent !important;
 }
+.total {
+    margin-left: auto;
+    margin-right: 29px;
 
+}
 .data-table table{
     /*overflow: hidden;*/
     /*margin-top: 75px !important;*/
