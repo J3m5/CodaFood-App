@@ -1,6 +1,11 @@
 Router.configure({
     layoutTemplate: 'layout',
 
+    waitOn: function () {
+        if(Router.current().route.getName().indexOf('admin') !== -1)
+            $('head').find('link').indexOf('framework7').remove();
+    }
+
 });
 
 Router.route('/', {

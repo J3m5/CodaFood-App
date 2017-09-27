@@ -3,9 +3,11 @@
     /*top: 0;*/
     /*width: 100%;*/
 }
-.content {
-    padding-top: 56px;
+.page-content .content {
+    padding-top: 66px;
     background-color: inherit;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 .cat-list {
     margin: 0 0 !important;
@@ -45,7 +47,7 @@
 a div.list-block {
     height: 100%;
 }
-div.list-block div.item-input {
+.modifycart div.list-block div.item-input {
     height: 100%;
     margin-bottom: 0;
 }
