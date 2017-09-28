@@ -29,7 +29,8 @@ check@1.2.5
 quave:useraccounts-framework7
 accounts-ui@1.1.9
 jquery@1.11.10
-msavin:mongol
 yogiben:admin
 fortawesome:fontawesome
 twbs:bootstrap
+babrahams:constellation
+constellation:schema

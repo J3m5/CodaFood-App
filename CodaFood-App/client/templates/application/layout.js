@@ -28,6 +28,7 @@ Template.layout.onRendered(function () {
     // console.log(app.params.swipePanel);
     // If we need to use custom DOM library, let's save it to $$ letiable:
     let $$ = Dom7;
+
 });
 
 Template.layout.onDestroyed(function () {
