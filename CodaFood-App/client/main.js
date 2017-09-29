@@ -7,7 +7,6 @@ Meteor.startup(() => {
             { title: 'Settings', url: AdminDashboard.path('/analytics/settings') }
         ]
     });
-
 });
 
 Template.AdminHeader.onCreated(function () {

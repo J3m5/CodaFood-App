@@ -14,3 +14,7 @@ Meteor.publish('salades', function(){
 Meteor.publish('burgers', function(){
     return Burgers.find();
 });
+
+Meteor.publish('tests', function(){
+    return Tests.find();
+});
