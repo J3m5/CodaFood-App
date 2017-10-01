@@ -37,12 +37,12 @@ Router.route('/', {
 });
 
 Router.route('/cat/:name', function () {
-    let test = this.params.name;
-    let low = test.toLowerCase();
-    Meteor.subscribe(low);
+    let Collection = this.params.name;
+    let collection = Collection.toLowerCase();
+    Meteor.subscribe(collection);
     this.render('produits', {
         data: function () {
-            return {produits: window[test].find({})}
+            return {produits: window[Collection].find({})}
         }
     })
 });

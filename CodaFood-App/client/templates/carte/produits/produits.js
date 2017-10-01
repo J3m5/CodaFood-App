@@ -1,17 +1,16 @@
 Template.produit.helpers({
-    qty: function () {
-        if (Cart.findOne({product: this.name})) {
+
+    qty () {
             return Cart.findOne({product: this.name}).quantity;
-        } else {
-            return "";
-        }
     },
-    bought: function () {
+
+    bought () {
         if (Cart.findOne({product: this.name})) {
             return true;
         }
     },
-    categorie: function () {
+
+    categorie () {
         if (Iron.Location.get().path.indexOf("Pizzas") !== -1) {
             return "pizza";
         } else {
@@ -19,50 +18,68 @@ Template.produit.helpers({
         }
     }
 });
+
+
+
+function animateCounter(op){
+    const $counter = $('.right i, .cartCount a');
+    $counter.addClass(op);
+    Meteor.setTimeout(function () {
+        $counter.removeClass(op);
+    }, 300);
+}
+
+function updateCartProduct(product, inc){
+    Cart.update({product: product},
+        {
+            $inc: {
+                quantity: inc
+            }
+        })
+}
+
+function fade(){
+    $('.modifycart .button:not(.add-to-cart)').removeClass('fade-in').addClass('fade-out');
+}
+
 Template.produits.events({
 
-    'click .modify'(event) {
-        let product = this.name;
-        let inc;
-        let price = this.price;
-        let op = event.target.textContent;
-        let findOneProd = Cart.findOne({product: product});
-        if (op === "add") {
-            inc = 1;
-            $('.right i, .cartCount a').addClass('added');
-            Meteor.setTimeout(function(){
-                $('.right i, .cartCount a').removeClass('added');
-            }, 300);
-        } else if (op === "remove") {
-            inc = -1;
-            $('.right i, .cartCount a').addClass('removed');
-            Meteor.setTimeout(function(){
-                $('.right i, .cartCount a').removeClass('removed');
-            }, 300);
-        }
-        if (findOneProd) {
-            if (Cart.findOne({product: product}).quantity === 1 && inc === -1) {
+    'click .modifycart .remove'() {
+        let inc = -1;
 
-                $('.modifycart .button:not(.add-to-cart)').removeClass('fade-in').addClass('fade-out');
-                Meteor.setTimeout(function () {
-                    Cart.remove({product: product});
-                }, 300)
-            } else {
-                Cart.update({product: product},
-                    {
-                        $inc: {
-                            quantity: inc
-                        }
-                    })
-            }
+        animateCounter('removed');
+
+        if (Cart.findOne({product: this.name}).quantity === 1) {
+
+            fade();
+            Meteor.setTimeout(() => {
+                Cart.remove({product: this.name});
+            }, 300);
         } else {
-            $('.modifycart .add-to-cart').removeClass('fade-in').addClass('fade-out');
-            $('.right i, .cartCount a').addClass('added');
-            Meteor.setTimeout(function () {
-                Cart.insert({'product': product, 'quantity': 1, 'price': price, 'checked': false});
-                $('.right i, .cartCount a').removeClass('added');
-            }, 300)
+            updateCartProduct(this.name, inc);
         }
+
+    },
+
+    'click .modifycart .add'() {
+
+        let inc = 1;
+
+        animateCounter('added');
+
+        updateCartProduct(this.name, inc);
+    },
+
+    'click .modifycart .add-to-cart'() {
+
+        fade();
+
+        $('.right i, .cartCount a').addClass('added');
+
+        Meteor.setTimeout( () => {
+            Cart.insert({'product': this.name, 'quantity': 1, 'price': this.price, 'checked': false});
+            $('.right i, .cartCount a').removeClass('added');
+        }, 300)
     }
 });
 

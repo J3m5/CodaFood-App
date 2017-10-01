@@ -19,7 +19,7 @@ Template.panelRight.helpers({
 
 Template.panelRight.events({
 
-    'click .allin': function () {
+    'click .check-all': function () {
         const col = Cart.find().fetch();
         let checked = $('.chk').is(':checked');
         col.forEach(function (el) {
@@ -59,41 +59,3 @@ Template.panelRight.events({
         }
     }
 });
-
-Template.cart_list.helpers({
-    subTotal: function () {
-        return this.price * this.quantity;
-    },
-    checked: function () {
-        return Cart.findOne({product: this.product}).checked;
-    },
-
-});
-
-Template.cart_list.events({
-    'click .product': function () {
-        Cart.update({product: this.product}, {
-            $set: {
-                checked: !this.checked
-            }
-        })
-    }
-});
-
-Template.cart_list.onCreated(function () {
-    // this.checked = new ReactiveVar();
-    // this.checked.set(false);
-});
-
-Template.panelRight.onCreated(function () {
-    //add your statement here
-});
-
-Template.panelRight.onRendered(function () {
-    //add your statement here
-});
-
-Template.panelRight.onDestroyed(function () {
-    //add your statement here
-});
-
