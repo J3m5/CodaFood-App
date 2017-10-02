@@ -1,6 +1,6 @@
 AdminConfig = {
     skin: 'black',
-    // adminEmails: ['admin@admin.log'],
+    adminEmails: ['admin@admin.log'],
     collections: {
         Categories: {
             tableColumns: [

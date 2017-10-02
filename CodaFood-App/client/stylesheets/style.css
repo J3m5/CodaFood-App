@@ -1,3 +1,4 @@
+
 .page {
     /*position: absolute;*/
     /*top: 0;*/
@@ -20,19 +21,7 @@
     margin-top: auto;
     margin-bottom: auto;
 }
-.carte-title h2 {
-    /*text-align: center;*/
-    margin: 0;
-    color: white;
-    font-size: 1.6em;
-}
-.item-title h2 {
-    text-align: center;
-}
-.carte-title {
-    padding: 0 !important;
-    line-height: 2em !important;
-}
+
 
 .list-block .item-input input[type=number] {
     font-size: 20px;

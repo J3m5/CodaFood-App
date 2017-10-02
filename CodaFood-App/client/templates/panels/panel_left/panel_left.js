@@ -2,6 +2,9 @@
 
 Template.panelLeft.events({
     //add your events here
+    'click .logout' (){
+        Meteor.logout();
+    }
 });
 
 Template.panelLeft.onCreated(function () {

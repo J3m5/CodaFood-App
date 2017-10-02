@@ -33,13 +33,12 @@
 .navbar i.material-icons{
     font-size: 26px;
 }
-.view-main .navbar-inner
-a i {
+.view-main .navbar-inner a i {
     text-shadow: 0 -1px 0 rgba(0,0,0,.5)
 }
 
 .navbar .title, .navbar .navbar-inner{
-    font-family: "Lobster Two", Roboto, Noto, Helvetica, Arial, sans-serif;
+    font-family: 'Lobster Two', 'Roboto', 'Noto', 'Helvetica', Arial, sans-serif;
     text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 

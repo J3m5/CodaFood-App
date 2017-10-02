@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Lobster+Two|Dosis');
-
 .card-content-inner p {
-    font-family: Dosis,Roboto,Noto,Helvetica,Arial,sans-serif;
-    font-size: 1.5em;
-    text-align: center;
+    font-family: 'Lato','Roboto','Noto','Helvetica','Arial',sans-serif;
+    font-size: 2rem;
+    text-align: left;
+    font-weight: 300;
 }
 .products .content-block-title{
     padding:0;
@@ -18,7 +17,7 @@
 
 .pizza-title {
     color: white !important;
-    font-family: Lobster Two, cursive;
+    font-family: 'Lobster Two', cursive;
     font-size: 2.5em;
     line-height: 1.25em;
     padding: 0 ;
