@@ -1,3 +1,7 @@
+/*.no-shadow {*/
+/*box-shadow: none !important;*/
+/*}*/
+
 div .content-block.right-panel {
     padding: 0 8px;
     margin-top: 0;

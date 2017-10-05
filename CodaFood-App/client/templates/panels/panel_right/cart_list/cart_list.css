@@ -1,7 +1,7 @@
-th, td {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    max-width: 50px !important;
+.panel-right .page-content .right-panel th, .page-content .right-panel td {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 50px;
     text-align: center;
 }
 

@@ -1,8 +1,4 @@
-import Test from '../../../imports/classes/Test';
-
-
-// const test = Test.findOne();
-
+import Test from '/imports/classes/Test';
 
 Template.carte.helpers({
     categories: function (){
@@ -14,16 +10,16 @@ Template.carte.helpers({
 });
 
 Template.carte.events({
-    //add your events here
 
     'submit form': function(e){
         e.preventDefault();
         const test = new Test;
-        console.log(test);
-
         let text = e.target.text.value;
         test.callMethod('add', text, (err, result) => {
-            console.log(err + result);
+            // console.log(err + result);
+            if (err){
+                Materialize.toast(err.reason, 5000);
+            }
         });
     }
 });
