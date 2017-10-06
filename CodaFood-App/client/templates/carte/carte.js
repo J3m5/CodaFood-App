@@ -18,7 +18,7 @@ Template.carte.events({
         test.callMethod('add', text, (err, result) => {
             // console.log(err + result);
             if (err){
-                Materialize.toast(err.reason, 5000);
+                toastr.info(err.reason);
             }
         });
     }
